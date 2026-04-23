@@ -1,0 +1,612 @@
+[
+  {
+    "question": "Simplify: 3/4 + 2/3",
+    "options": ["17/12", "13/12", "19/12", "11/12"],
+    "answer": "17/12",
+    "explanation": "Find common denominator (12): 9/12 + 8/12 = 17/12"
+  },
+  {
+    "question": "Solve for x: 2x + 5 = 15",
+    "options": ["x=4", "x=5", "x=6", "x=7"],
+    "answer": "x=5",
+    "explanation": "Subtract 5 → 2x=10 → x=5"
+  },
+  {
+    "question": "Area of a triangle with base 10 cm and height 6 cm?",
+    "options": ["20 cm²", "30 cm²", "40 cm²", "60 cm²"],
+    "answer": "30 cm²",
+    "explanation": "Area = ½ × base × height = ½ × 10 × 6 = 30 cm²"
+  },
+  {
+    "question": "Convert 0.75 to a fraction",
+    "options": ["3/4", "2/3", "1/2", "5/6"],
+    "answer": "3/4",
+    "explanation": "0.75 = 75/100 = 3/4"
+  },
+  {
+    "question": "Probability of rolling a 4 on a fair die?",
+    "options": ["1/2", "1/3", "1/6", "1/4"],
+    "answer": "1/6",
+    "explanation": "One favorable outcome out of 6 possible outcomes"
+  },
+  {
+    "question": "Simplify: (x² × x³)",
+    "options": ["x⁵", "x⁶", "x⁴", "x³"],
+    "answer": "x⁵",
+    "explanation": "Add exponents: 2+3=5"
+  },
+  {
+    "question": "Circumference of a circle with radius 7 cm? (π≈3.14)",
+    "options": ["21.98 cm", "43.96 cm", "14 cm", "49 cm"],
+    "answer": "43.96 cm",
+    "explanation": "C = 2πr = 2 × 3.14 × 7 = 43.96 cm"
+  },
+  {
+    "question": "Solve: 5x = 45",
+    "options": ["x=7", "x=8", "x=9", "x=10"],
+    "answer": "x=9",
+    "explanation": "Divide both sides by 5 → x=9"
+  },
+  {
+    "question": "Volume of a cube with side length 4 cm?",
+    "options": ["16 cm³", "32 cm³", "64 cm³", "128 cm³"],
+    "answer": "64 cm³",
+    "explanation": "Volume = side³ = 4³ = 64 cm³"
+  },
+  {
+    "question": "Simplify: (2/5 ÷ 4/7)",
+    "options": ["14/20", "7/10", "2/35", "8/35"],
+    "answer": "7/10",
+    "explanation": "Multiply by reciprocal: (2/5 × 7/4) = 14/20 = 7/10"
+  },
+  
+  
+  {
+    "question": "What is 50÷5?",
+    "options": ["5", "10", "15", "20"],
+    "answer": "10",
+    "explanation": "50÷5=10"
+  },
+  {
+    "question": "What is 7×7?",
+    "options": ["47", "49", "51", "53"],
+    "answer": "49",
+    "explanation": "7×7=49"
+  },
+  {
+    "question": "What is 18–9?",
+    "options": ["7", "8", "9", "10"],
+    "answer": "9",
+    "explanation": "18–9=9"
+  },
+  {
+    "question": "What is √81?",
+    "options": ["8", "9", "10", "11"],
+    "answer": "9",
+    "explanation": "√81=9"
+  },
+  {
+    "question": "What is 4³?",
+    "options": ["64", "65", "66", "67"],
+    "answer": "64",
+    "explanation": "4³=64"
+  },
+
+  {
+    "question": "What is 8×8?",
+    "options": ["56", "64", "72", "80"],
+    "answer": "64",
+    "explanation": "8×8=64"
+  },
+  {
+    "question": "What is 90÷10?",
+    "options": ["8", "9", "10", "11"],
+    "answer": "9",
+    "explanation": "90÷10=9"
+  },
+  {
+    "question": "What is 15–7?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "8",
+    "explanation": "15–7=8"
+  },
+  {
+    "question": "What is √36?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "6",
+    "explanation": "√36=6"
+  },
+  {
+    "question": "What is 11×11?",
+    "options": ["111", "121", "131", "141"],
+    "answer": "121",
+    "explanation": "11×11=121"
+  },
+  {
+    "question": "What is 200–75?",
+    "options": ["115", "120", "125", "130"],
+    "answer": "125",
+    "explanation": "200–75=125"
+  },
+  {
+    "question": "What is 49÷7?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "7",
+    "explanation": "49÷7=7"
+  },
+  {
+    "question": "What is 6³?",
+    "options": ["216", "126", "96", "36"],
+    "answer": "216",
+    "explanation": "6³=216"
+  },
+  {
+    "question": "What is √25?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "√25=5"
+  },
+  {
+    "question": "What is 14+6?",
+    "options": ["18", "19", "20", "21"],
+    "answer": "20",
+    "explanation": "14+6=20"
+  },
+
+  {
+    "question": "What is 30÷6?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "30÷6=5"
+  },
+  {
+    "question": "What is 12×12?",
+    "options": ["124", "144", "154", "164"],
+    "answer": "144",
+    "explanation": "12×12=144"
+  },
+  {
+    "question": "What is √16?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "4",
+    "explanation": "√16=4"
+  },
+  {
+    "question": "What is 45–20?",
+    "options": ["15", "20", "25", "30"],
+    "answer": "25",
+    "explanation": "45–20=25"
+  },
+  {
+    "question": "What is 7×8?",
+    "options": ["54", "56", "58", "60"],
+    "answer": "56",
+    "explanation": "7×8=56"
+  },
+  {
+    "question": "What is 81÷9?",
+    "options": ["8", "9", "10", "11"],
+    "answer": "9",
+    "explanation": "81÷9=9"
+  },
+  {
+    "question": "What is 5³?",
+    "options": ["125", "150", "175", "200"],
+    "answer": "125",
+    "explanation": "5³=125"
+  },
+  {
+    "question": "What is √100?",
+    "options": ["9", "10", "11", "12"],
+    "answer": "10",
+    "explanation": "√100=10"
+  },
+  {
+    "question": "What is 60÷12?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "60÷12=5"
+  },
+  {
+    "question": "What is 25+25?",
+    "options": ["40", "45", "50", "55"],
+    "answer": "50",
+    "explanation": "25+25=50"
+  },
+  {
+    "question": "What is 13×2?",
+    "options": ["24", "25", "26", "27"],
+    "answer": "26",
+    "explanation": "13×2=26"
+  },
+  {
+    "question": "What is 90–30?",
+    "options": ["50", "55", "60", "65"],
+    "answer": "60",
+    "explanation": "90–30=60"
+  },
+  {
+    "question": "What is √121?",
+    "options": ["10", "11", "12", "13"],
+    "answer": "11",
+    "explanation": "√121=11"
+  },
+  {
+    "question": "What is 14×3?",
+    "options": ["40", "41", "42", "43"],
+    "answer": "42",
+    "explanation": "14×3=42"
+  },
+  {
+    "question": "What is 72÷8?",
+    "options": ["8", "9", "10", "11"],
+    "answer": "9",
+    "explanation": "72÷8=9"
+  },
+  {
+    "question": "What is 200–150?",
+    "options": ["40", "45", "50", "55"],
+    "answer": "50",
+    "explanation": "200–150=50"
+  },
+  {
+    "question": "What is 16÷4?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "explanation": "16÷4=4"
+  },
+  {
+    "question": "What is 8³?",
+    "options": ["512", "256", "128", "64"],
+    "answer": "512",
+    "explanation": "8³=512"
+  },
+  {
+    "question": "What is √49?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "7",
+    "explanation": "√49=7"
+  },
+  {
+    "question": "What is 33+17?",
+    "options": ["49", "50", "51", "52"],
+    "answer": "50",
+    "explanation": "33+17=50"
+  },
+  {
+    "question": "What is 100÷25?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "explanation": "100÷25=4"
+  },
+  {
+    "question": "What is 19×2?",
+    "options": ["36", "37", "38", "39"],
+    "answer": "38",
+    "explanation": "19×2=38"
+  },
+  {
+    "question": "What is 150–75?",
+    "options": ["70", "75", "80", "85"],
+    "answer": "75",
+    "explanation": "150–75=75"
+  },
+  {
+    "question": "What is √81?",
+    "options": ["8", "9", "10", "11"],
+    "answer": "9",
+    "explanation": "√81=9"
+  },
+  {
+    "question": "What is 20×5?",
+    "options": ["90", "95", "100", "105"],
+    "answer": "100",
+    "explanation": "20×5=100"
+  },
+  
+  {
+    "question": "What is 40÷8?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "40÷8=5"
+  },
+  {
+    "question": "What is 9×9?",
+    "options": ["81", "91", "99", "101"],
+    "answer": "81",
+    "explanation": "9×9=81"
+  },
+  {
+    "question": "What is √225?",
+    "options": ["14", "15", "16", "17"],
+    "answer": "15",
+    "explanation": "√225=15"
+  },
+  {
+    "question": "What is 120–45?",
+    "options": ["65", "70", "75", "80"],
+    "answer": "75",
+    "explanation": "120–45=75"
+  },
+  {
+    "question": "What is 6×7?",
+    "options": ["40", "41", "42", "43"],
+    "answer": "42",
+    "explanation": "6×7=42"
+  },
+  {
+    "question": "What is 144÷12?",
+    "options": ["10", "11", "12", "13"],
+    "answer": "12",
+    "explanation": "144÷12=12"
+  },
+  {
+    "question": "What is 4³?",
+    "options": ["64", "65", "66", "67"],
+    "answer": "64",
+    "explanation": "4³=64"
+  },
+  {
+    "question": "What is √169?",
+    "options": ["11", "12", "13", "14"],
+    "answer": "13",
+    "explanation": "√169=13"
+  },
+  {
+    "question": "What is 22×2?",
+    "options": ["42", "43", "44", "45"],
+    "answer": "44",
+    "explanation": "22×2=44"
+  },
+  {
+    "question": "What is 75–25?",
+    "options": ["45", "50", "55", "60"],
+    "answer": "50",
+    "explanation": "75–25=50"
+  },
+  {
+    "question": "What is 10×10?",
+    "options": ["90", "95", "100", "105"],
+    "answer": "100",
+    "explanation": "10×10=100"
+  },
+  {
+    "question": "What is 81÷3?",
+    "options": ["26", "27", "28", "29"],
+    "answer": "27",
+    "explanation": "81÷3=27"
+  },
+  {
+    "question": "What is √64?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "8",
+    "explanation": "√64=8"
+  },
+  {
+    "question": "What is 18×5?",
+    "options": ["80", "85", "90", "95"],
+    "answer": "90",
+    "explanation": "18×5=90"
+  },
+  {
+    "question": "What is 200–125?",
+    "options": ["65", "70", "75", "80"],
+    "answer": "75",
+    "explanation": "200–125=75"
+  },
+  {
+    "question": "What is 50÷2?",
+    "options": ["20", "25", "30", "35"],
+    "answer": "25",
+    "explanation": "50÷2=25"
+  },
+  {
+    "question": "What is 14×4?",
+    "options": ["54", "55", "56", "57"],
+    "answer": "56",
+    "explanation": "14×4=56"
+  },
+  {
+    "question": "What is √49?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "7",
+    "explanation": "√49=7"
+  },
+  {
+    "question": "What is 33+17?",
+    "options": ["49", "50", "51", "52"],
+    "answer": "50",
+    "explanation": "33+17=50"
+  },
+  {
+    "question": "What is 100÷4?",
+    "options": ["20", "25", "30", "35"],
+    "answer": "25",
+    "explanation": "100÷4=25"
+  },
+  {
+    "question": "What is 19×3?",
+    "options": ["55", "56", "57", "58"],
+    "answer": "57",
+    "explanation": "19×3=57"
+  },
+  {
+    "question": "What is 150–50?",
+    "options": ["95", "100", "105", "110"],
+    "answer": "100",
+    "explanation": "150–50=100"
+  },
+  {
+    "question": "What is √81?",
+    "options": ["8", "9", "10", "11"],
+    "answer": "9",
+    "explanation": "√81=9"
+  },
+  {
+    "question": "What is 20×6?",
+    "options": ["110", "115", "120", "125"],
+    "answer": "120",
+    "explanation": "20×6=120"
+  },
+  {
+    "question": "What is 64÷16?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "explanation": "64÷16=4"
+  },
+  
+  {
+    "question": "What is 45÷9?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "45÷9=5"
+  },
+  {
+    "question": "What is 15×4?",
+    "options": ["55", "60", "65", "70"],
+    "answer": "60",
+    "explanation": "15×4=60"
+  },
+  {
+    "question": "What is √196?",
+    "options": ["13", "14", "15", "16"],
+    "answer": "14",
+    "explanation": "√196=14"
+  },
+  {
+    "question": "What is 250–125?",
+    "options": ["110", "120", "125", "130"],
+    "answer": "125",
+    "explanation": "250–125=125"
+  },
+  {
+    "question": "What is 21×2?",
+    "options": ["40", "41", "42", "43"],
+    "answer": "42",
+    "explanation": "21×2=42"
+  },
+  {
+    "question": "What is 80÷16?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5",
+    "explanation": "80÷16=5"
+  },
+  {
+    "question": "What is 9³?",
+    "options": ["729", "739", "749", "759"],
+    "answer": "729",
+    "explanation": "9³=729"
+  },
+  {
+    "question": "What is √256?",
+    "options": ["14", "15", "16", "17"],
+    "answer": "16",
+    "explanation": "√256=16"
+  },
+  {
+    "question": "What is 32+18?",
+    "options": ["49", "50", "51", "52"],
+    "answer": "50",
+    "explanation": "32+18=50"
+  },
+  {
+    "question": "What is 120÷30?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "4",
+    "explanation": "120÷30=4"
+  },
+  {
+    "question": "What is 17×3?",
+    "options": ["50", "51", "52", "53"],
+    "answer": "51",
+    "explanation": "17×3=51"
+  },
+  {
+    "question": "What is 300–200?",
+    "options": ["95", "100", "105", "110"],
+    "answer": "100",
+    "explanation": "300–200=100"
+  },
+  {
+    "question": "What is √144?",
+    "options": ["10", "11", "12", "13"],
+    "answer": "12",
+    "explanation": "√144=12"
+  },
+  {
+    "question": "What is 25×4?",
+    "options": ["95", "100", "105", "110"],
+    "answer": "100",
+    "explanation": "25×4=100"
+  },
+  {
+    "question": "What is 84÷7?",
+    "options": ["10", "11", "12", "13"],
+    "answer": "12",
+    "explanation": "84÷7=12"
+  },
+  {
+    "question": "What is 50+25?",
+    "options": ["70", "75", "80", "85"],
+    "answer": "75",
+    "explanation": "50+25=75"
+  },
+  {
+    "question": "What is 20×7?",
+    "options": ["130", "135", "140", "145"],
+    "answer": "140",
+    "explanation": "20×7=140"
+  },
+  {
+    "question": "What is √400?",
+    "options": ["18", "19", "20", "21"],
+    "answer": "20",
+    "explanation": "√400=20"
+  },
+  {
+    "question": "What is 27÷9?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3",
+    "explanation": "27÷9=3"
+  },
+  {
+    "question": "What is 16×6?",
+    "options": ["94", "95", "96", "97"],
+    "answer": "96",
+    "explanation": "16×6=96"
+  },
+  {
+    "question": "What is 500–250?",
+    "options": ["240", "245", "250", "255"],
+    "answer": "250",
+    "explanation": "500–250=250"
+  },
+  {
+    "question": "What is √81?",
+    "options": ["8", "9", "10", "11"],
+    "answer": "9",
+    "explanation": "√81=9"
+  },
+  {
+    "question": "What is 18×4?",
+    "options": ["70", "72", "74", "76"],
+    "answer": "72",
+    "explanation": "18×4=72"
+  },
+  {
+    "question": "What is 64÷4?",
+    "options": ["14", "15", "16", "17"],
+    "answer": "16",
+    "explanation": "64÷4=16"
+  },
+  {
+    "question": "What is 11×11?",
+    "options": ["111", "121", "131", "141"],
+    "answer": "121",
+    "explanation": "11×11=121"
+  }
+]
+
+
+
+
