@@ -1,6 +1,10 @@
 import streamlit as st
 import random
-from questions import questions   # your full 104-question bank
+import json
+
+with open("questions.json", "r", encoding="utf-8") as f:
+    questions = json.load(f)
+
 
 st.title("Smart7 Maths Practice App")
 
