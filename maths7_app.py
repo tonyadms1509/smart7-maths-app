@@ -1,5 +1,6 @@
 import json
 import streamlit as st
+import requests
 
 # Load questions from JSON
 with open("questions.json", "r", encoding="utf-8") as f:
@@ -13,14 +14,12 @@ if "index" not in st.session_state:
     st.session_state.score = 0
     st.session_state.show_feedback = False
     st.session_state.last_correct = None
-if "full_unlocked" not in st.session_state:
-    st.session_state.full_unlocked = False
 
 # Logo + Title
 st.image("logo.png", width=120)
 st.title("Smart7 Maths Practice App")
 
-# Learner-friendly splash with extra explanation
+# Learner-friendly splash
 st.markdown("""
 <div style="background-color:#e6ffe6; padding:12px; border-radius:8px; margin-bottom:20px;">
     <h4>🎓 Welcome to Smart7!</h4>
@@ -33,6 +32,14 @@ st.markdown("""
 # Sidebar controls
 st.sidebar.header("Smart7 Modes")
 
+# 🔹 Check unlock status from backend
+try:
+    status = requests.get("https://smart7-backend.onrender.com/unlock-status").json()
+    full_unlocked = status.get("full_unlocked", False)
+except Exception:
+    full_unlocked = False
+    st.sidebar.warning("⚠️ Could not reach unlock server. Defaulting to Demo Mode.")
+
 # Default: Demo Mode
 mode = "Demo (10 questions)"
 questions = questions[:10]
@@ -42,15 +49,10 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("Unlock Full Mode")
 st.sidebar.write("Parents can unlock all 100 questions below:")
 
-# ✅ Real Yoco payment link
 st.sidebar.markdown("[Click here to pay securely via Yoco](https://pay.yoco.com/r/2PeKx1)")
 
-# Manual confirmation after payment
-if st.sidebar.checkbox("✅ I have completed payment"):
-    st.session_state.full_unlocked = True
-
-# If unlocked, enable Full Mode
-if st.session_state.full_unlocked:
+# If backend confirms unlock
+if full_unlocked:
     mode = "Full (100 questions)"
     with open("questions.json", "r", encoding="utf-8") as f:
         questions = json.load(f)
@@ -88,7 +90,7 @@ if not st.session_state.started:
         st.rerun()
 
 else:
-    # Progress tracker with fix
+    # Progress tracker
     progress_value = min((st.session_state.index+1) / len(questions), 1.0)
     st.subheader(f"Question {st.session_state.index+1} of {len(questions)}")
     st.progress(progress_value)
