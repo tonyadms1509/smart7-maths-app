@@ -13,45 +13,48 @@ if "index" not in st.session_state:
     st.session_state.score = 0
     st.session_state.show_feedback = False
     st.session_state.last_correct = None
+if "full_unlocked" not in st.session_state:
+    st.session_state.full_unlocked = False
 
 # Logo + Title
 st.image("logo.png", width=120)
 st.title("Smart7 Maths Practice App")
 
-# Compact Splash Section
+# Learner-friendly splash
 st.markdown("""
-<div style="background-color:#f0f8ff; padding:15px; border-radius:8px; margin-bottom:20px;">
-    <h3>📖 About Smart7</h3>
-    <p>Smart7 helps Grade 7 learners build confidence in <b>fractions, algebra, geometry, and word problems</b>.</p>
-    <p>Learners get <b>instant feedback</b>, <b>progress tracking</b>, and <b>motivational achievements</b> — making maths less intimidating and more fun.</p>
+<div style="background-color:#e6ffe6; padding:12px; border-radius:8px; margin-bottom:20px;">
+    <h4>🎓 Welcome Learners!</h4>
+    <p>Start with <b>Demo Mode</b> (10 questions) to practice for free.</p>
+    <p>To unlock <b>Full Mode</b> (100 questions), ask your parent to help with Yoco payment.</p>
 </div>
 """, unsafe_allow_html=True)
 
-# Sidebar controls for Demo vs Full Mode
+# Sidebar controls
 st.sidebar.header("Smart7 Modes")
 
-# Mode selection
-mode = st.sidebar.radio(
-    "Choose mode:",
-    ["Demo (10 questions)", "Full (100 questions)"],
-    index=0
-)
-
-# If Demo Mode, limit questions
-if mode == "Demo (10 questions)":
-    questions = questions[:10]
+# Default: Demo Mode
+mode = "Demo (10 questions)"
+questions = questions[:10]
 
 # Unlock Full Mode via Yoco
 st.sidebar.markdown("---")
 st.sidebar.subheader("Unlock Full Mode")
-st.sidebar.write("To access all 100 questions, please unlock Full Mode below:")
+st.sidebar.write("Parents can unlock all 100 questions below:")
 
 if st.sidebar.button("🔓 Unlock via Yoco"):
     st.sidebar.success("Redirecting to Yoco payment...")
     st.sidebar.markdown("[Click here to pay](https://pay.yoco.com/your-link)")
     # Replace with your actual Yoco checkout link
+    st.session_state.full_unlocked = True
 
-# Custom CSS for Start + Submit + Next buttons
+# If unlocked, enable Full Mode
+if st.session_state.full_unlocked:
+    mode = "Full (100 questions)"
+    with open("questions.json", "r", encoding="utf-8") as f:
+        questions = json.load(f)
+    st.sidebar.success("✅ Full Mode unlocked — your child now has access to all 100 questions 🎉")
+
+# Custom CSS for buttons
 st.markdown("""
     <style>
     div.stButton > button:first-child {
