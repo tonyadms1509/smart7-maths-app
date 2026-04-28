@@ -42,10 +42,11 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("Unlock Full Mode")
 st.sidebar.write("Parents can unlock all 100 questions below:")
 
-if st.sidebar.button("🔓 Unlock via Yoco"):
-    st.sidebar.success("Redirecting to Yoco payment...")
-    # ✅ Real Yoco payment link
-    st.sidebar.markdown("[Click here to pay](https://pay.yoco.com/r/2PeKx1)")
+# ✅ Real Yoco payment link
+st.sidebar.markdown("[Click here to pay securely via Yoco](https://pay.yoco.com/r/2PeKx1)")
+
+# Manual confirmation after payment
+if st.sidebar.checkbox("✅ I have completed payment"):
     st.session_state.full_unlocked = True
 
 # If unlocked, enable Full Mode
