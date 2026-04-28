@@ -44,8 +44,8 @@ st.sidebar.write("Parents can unlock all 100 questions below:")
 
 if st.sidebar.button("🔓 Unlock via Yoco"):
     st.sidebar.success("Redirecting to Yoco payment...")
-    # Replace this placeholder with your actual Yoco payment link
-    st.sidebar.markdown("[Click here to pay](https://pay.yoco.com/YOUR-LINK-HERE)")
+    # ✅ Real Yoco payment link
+    st.sidebar.markdown("[Click here to pay](https://pay.yoco.com/r/2PeKx1)")
     st.session_state.full_unlocked = True
 
 # If unlocked, enable Full Mode
