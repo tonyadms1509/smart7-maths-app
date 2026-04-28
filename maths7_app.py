@@ -27,6 +27,30 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# Sidebar controls for Demo vs Full Mode
+st.sidebar.header("Smart7 Modes")
+
+# Mode selection
+mode = st.sidebar.radio(
+    "Choose mode:",
+    ["Demo (10 questions)", "Full (100 questions)"],
+    index=0
+)
+
+# If Demo Mode, limit questions
+if mode == "Demo (10 questions)":
+    questions = questions[:10]
+
+# Unlock Full Mode via Yoco
+st.sidebar.markdown("---")
+st.sidebar.subheader("Unlock Full Mode")
+st.sidebar.write("To access all 100 questions, please unlock Full Mode below:")
+
+if st.sidebar.button("🔓 Unlock via Yoco"):
+    st.sidebar.success("Redirecting to Yoco payment...")
+    st.sidebar.markdown("[Click here to pay](https://pay.yoco.com/your-link)")
+    # Replace with your actual Yoco checkout link
+
 # Custom CSS for Start + Submit + Next buttons
 st.markdown("""
     <style>
