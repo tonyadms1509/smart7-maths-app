@@ -83,9 +83,10 @@ if not st.session_state.started:
         st.rerun()
 
 else:
-    # Progress tracker
+    # Progress tracker with fix
+    progress_value = min((st.session_state.index+1) / len(questions), 1.0)
     st.subheader(f"Question {st.session_state.index+1} of {len(questions)}")
-    st.progress((st.session_state.index+1) / len(questions))
+    st.progress(progress_value)
 
     # If quiz finished
     if st.session_state.index >= len(questions):
