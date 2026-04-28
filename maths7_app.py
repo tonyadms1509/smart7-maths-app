@@ -20,12 +20,13 @@ if "full_unlocked" not in st.session_state:
 st.image("logo.png", width=120)
 st.title("Smart7 Maths Practice App")
 
-# Learner-friendly splash
+# Learner-friendly splash with extra explanation
 st.markdown("""
 <div style="background-color:#e6ffe6; padding:12px; border-radius:8px; margin-bottom:20px;">
-    <h4>🎓 Welcome Learners!</h4>
-    <p>Start with <b>Demo Mode</b> (10 questions) to practice for free.</p>
-    <p>To unlock <b>Full Mode</b> (100 questions), ask your parent to help with Yoco payment.</p>
+    <h4>🎓 Welcome to Smart7!</h4>
+    <p>Smart7 helps Grade 7 learners practice <b>fractions, algebra, geometry, and word problems</b> with confidence.</p>
+    <p>Start with <b>Demo Mode</b> (10 free questions) to see how the app works.</p>
+    <p>Parents can unlock <b>Full Mode</b> (100 questions) using secure Yoco payment.</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -43,8 +44,8 @@ st.sidebar.write("Parents can unlock all 100 questions below:")
 
 if st.sidebar.button("🔓 Unlock via Yoco"):
     st.sidebar.success("Redirecting to Yoco payment...")
-    st.sidebar.markdown("[Click here to pay](https://pay.yoco.com/your-link)")
-    # Replace with your actual Yoco checkout link
+    # Replace this placeholder with your actual Yoco payment link
+    st.sidebar.markdown("[Click here to pay](https://pay.yoco.com/YOUR-LINK-HERE)")
     st.session_state.full_unlocked = True
 
 # If unlocked, enable Full Mode
