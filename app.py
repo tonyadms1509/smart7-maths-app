@@ -1,30 +1,39 @@
-from flask import Flask, request, jsonify
-import requests
+import os
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-YOCO_SECRET_KEY = "sk_live_6118503aM1J7kzZ8bec485fb0427"
+# --- Health Check Route ---
+@app.route("/health")
+def health():
+    return jsonify({"status": "ok", "message": "Backend is running!"})
 
-unlock_status = {"full_unlocked": False}
+# --- Version Route ---
+@app.route("/version")
+def version():
+    return jsonify({"app": "Smart7", "version": "1.0", "grade_levels": "7–12"})
 
-@app.route("/create-checkout", methods=["POST"])
-def create_checkout():
-    data = {
-        "amount": 10000,
-        "currency": "ZAR",
-        "description": "Smart7 Full Mode Unlock"
-    }
-    headers = {"X-Auth-Secret-Key": YOCO_SECRET_KEY}
-    response = requests.post("https://online.yoco.com/v1/charges/", headers=headers, json=data)
-    return jsonify(response.json())
-
-@app.route("/yoco-webhook", methods=["POST"])
-def yoco_webhook():
-    payload = request.json
-    if payload.get("status") == "successful":
-        unlock_status["full_unlocked"] = True
-    return jsonify({"received": True})
-
+# --- Unlock Status Route ---
 @app.route("/unlock-status", methods=["GET"])
-def unlock_status_endpoint():
-    return jsonify(unlock_status)
+def unlock_status():
+    # Example: check if user is unlocked (replace with your DB or logic)
+    user_id = request.args.get("user_id", "demo_user")
+    # For demo purposes, always return unlocked
+    return jsonify({"user_id": user_id, "status": "unlocked"})
+
+# --- Payment Confirmation Route ---
+@app.route("/confirm-payment", methods=["POST"])
+def confirm_payment():
+    data = request.json
+    user_id = data.get("user_id")
+    amount = data.get("amount")
+    # Example: store payment confirmation (replace with DB logic)
+    return jsonify({
+        "user_id": user_id,
+        "amount": amount,
+        "message": "Payment confirmed. Full Mode unlocked!"
+    })
+
+# --- Main Entry Point ---
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
